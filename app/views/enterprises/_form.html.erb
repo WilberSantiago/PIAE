@@ -1,0 +1,72 @@
+<%= form_with(model: enterprise, local: true) do |form| %>
+  <% if enterprise.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(enterprise.errors.count, "error") %> prohibited this enterprise from being saved:</h2>
+
+      <ul>
+      <% enterprise.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :enterprise_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :enterprise_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :municipality_id %>
+    <%= form.number_field :municipality_id, id: :enterprise_municipality_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :entry_id %>
+    <%= form.number_field :entry_id, id: :enterprise_entry_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :owner %>
+    <%= form.text_field :owner, id: :enterprise_owner %>
+  </div>
+
+  <div class="field">
+    <%= form.label :about %>
+    <%= form.text_field :about, id: :enterprise_about %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.number_field :phone, id: :enterprise_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image, id: :enterprise_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :enterprise_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :latitude %>
+    <%= form.text_field :latitude, id: :enterprise_latitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :longitude %>
+    <%= form.text_field :longitude, id: :enterprise_longitude %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

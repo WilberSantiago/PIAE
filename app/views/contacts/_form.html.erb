@@ -1,0 +1,75 @@
+<div id="contact-modal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <div class="row no-gutters">
+        <div class="col-sm-12 col-md-5">
+          <div class="jumbotron jumbotron-fluid no-margin" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/assets/pictures/note.jpg'); background-size: cover; background-position: center right;  width: 100%; height: 100%; padding: 0; color: #fff;">
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-7">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Contactenos</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <%= form_with(model: @contact, remote: true) do |form| %>
+          <div class="modal-body">
+
+              <% if @contact.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+                  <ul>
+                  <% @contact.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                  </ul>
+                </div>
+              <% end %>
+
+              <div class="row">
+
+                  <div class="col-sm-12 col-md-12">
+                    <div class="form-group">
+                      <%= form.label :nombre %>
+                      <%= form.text_field :name, id: :contact_name, class: "form-control", required:  true, autofocus: true %>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-12 col-md-12">
+                    <div class="form-group">
+                      <%= form.label :correo_electronico %>
+                      <%= form.email_field :email, id: :contact_email, class: "form-control", required:  true %>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-12 col-md-12">
+                    <div class="form-group">
+                      <%= form.label :teléfono %>
+                      <%= form.number_field :phone, id: :contact_phone, class: "form-control", required:  true %>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-12 col-md-12">
+                    <div class="form-group">
+                      <%= form.label :contenido %>
+                      <%= form.text_area :content, id: :contact_content, class: "form-control", required:  true, rows: 3 %>
+                    </div>
+                  </div>
+
+              </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            <%= form.submit "Enviar datos", class: "btn btn-primary float-right" %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

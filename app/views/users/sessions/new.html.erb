@@ -1,0 +1,48 @@
+<div class="jumbotron jumbotron-fluid no-margin">
+
+    <div class="row no-gutters">
+      <div class="col-sm-12 col-md-8 offset-md-2">
+
+        <div class="card no-margin">
+          <div class="card-header">Registro de usuarios</div>
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="card-body">
+              <%= devise_error_messages! %>
+
+                  <div class="row">
+
+                      <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                          <%= f.label :correo_electronico %>
+                          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", required:  true %>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                          <%= f.label :contraseña %>
+                          <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", required:  true %>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-12 col-md-12">
+                        <div class="custom-control custom-checkbox">
+                          <%= f.check_box :remember_me, class: "custom-control-input" %>
+                          <%= f.label :remember_me, class: "custom-control-label" %>
+                        </div>
+                      </div>
+
+                  </div>
+
+            </div>
+            <div class="card-footer">
+                  <%= f.submit "Enviar datos", class: "btn btn-primary float-right" %>
+                  <%= render "users/shared/links" %>
+            </div>
+            <% end %>
+          </div>
+
+      </div>
+    </div>
+
+</div>

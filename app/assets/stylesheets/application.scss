@@ -1,0 +1,66 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap.min.css";
+@import "fontawesome/css/fontawesome-all.min.css";
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+body { background: #fff; font-family: 'Oswald', sans-serif; font-size: 100%; padding: 0rem 0rem; }
+h1, h2, h3, h4, h5, h6 { text-transform: uppercase; font-weight: lighter !important; }
+p, span { font-size: 1.1rem; }
+
+.navbar { padding: 0.7rem 0rem; }
+.navbar a { color: #000 !important; text-transform: uppercase; }
+.navbar.navbar-dark.bg-dark { padding: 1rem 0rem !important; background: #000 !important; color: #fff; }
+.navbar.navbar-dark.bg-dark a { color: #fff !important; padding: 0.2rem 1rem; }
+.navbar.navbar-dark.bg-dark .btn.btn-outline-light:hover { color: #000 !important; }
+
+.list-group li { background: transparent; }
+.list-group-item:first-child { border-radius: 0; }
+.list-group-item:last-child { border-radius: 0; }
+
+.card { border-radius: 0; margin-bottom: 2rem; }
+.card-header { border-radius: 0; }
+.card-img-top { border-top-left-radius: 0; border-top-right-radius: 0; }
+
+.modal, .modal-header, .modal-content, .modal-footer { border-radius: 0 !important; }
+.modal-backdrop { background-color:  rgba(0, 0, 0, 0.9) !important; opacity: 0.8 !important; }
+.modal-lg > .modal-content { padding: 1rem; }
+
+.jumbotron { margin: 0; background: #fff; }
+.silver.jumbotron { background: #f7f7f7; }
+.silver.jumbotron .card { background: transparent; }
+
+.form-control { color: #495057; border: 1px solid #ccc; border-radius: 0; }
+.form-control:focus { color: #495057; border-color: #80bdff; outline: 0; box-shadow: none; }
+.custom-file { border-radius: 0 !important; }
+.custom-file-label { border-radius: 0; }
+.custom-file-input { border-radius: 0 !important; }
+
+.red-text { color: #FF4F2D; }
+.green-text { color: #38DE92; }
+.brown-text { color: #b98479; }
+.grey-text { color: #5c576f; }
+.purple-text { color: #db5db5; }
+.blue-text { color: #79a0b9; }
+
+.img-thumbnail { margin-bottom: 1rem !important; }
+
+.btn { border-radius: 0; }
+
+.no-margin { margin: 0; }
+
+video { width: 100%; height: auto; overflow: hidden; line-height: 1 !important; }

@@ -1,0 +1,30 @@
+<header>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <%= link_to "PIAE", root_path, class: "navbar-brand" %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <% link_to "Empresas", enterprises_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Contactenos", new_contact_path, remote: true, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <% if user_signed_in? %>
+              <%= link_to current_user.name, edit_user_registration_path, class: "nav-link" %>
+            <% else %>
+              <% link_to new_user_session_path, class: "nav-link" do %>
+                <i class="fas fa-lock"></i>
+              <% end %>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

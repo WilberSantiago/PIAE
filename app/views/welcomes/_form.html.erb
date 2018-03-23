@@ -1,0 +1,57 @@
+<%= form_with(model: welcome, local: true) do |form| %>
+  <% if welcome.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(welcome.errors.count, "error") %> prohibited this welcome from being saved:</h2>
+
+      <ul>
+      <% welcome.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :welcome_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :subtitle %>
+    <%= form.text_field :subtitle, id: :welcome_subtitle %>
+  </div>
+
+  <div class="field">
+    <%= form.label :about %>
+    <%= form.text_field :about, id: :welcome_about %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :welcome_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.number_field :phone, id: :welcome_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :welcome_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :latitude %>
+    <%= form.text_field :latitude, id: :welcome_latitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :longitude %>
+    <%= form.text_field :longitude, id: :welcome_longitude %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

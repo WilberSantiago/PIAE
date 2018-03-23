@@ -1,0 +1,84 @@
+<div class="jumbotron jumbotron-fluid" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/pictures/studying.jpg'); background-size: auto; background-position: center;  width: 100%; height: 600px; padding: 0; color: #fff;">
+    <div class="container text-center" style="width: 100%; height: 100% !important;">
+        <div class="row align-items-center" style="width: 100%; height: 100% !important;">
+            <div class="col-sm-12 col-md-10 offset-md-1">
+                <h1 class="display-2">Cuando se trata de negocios, CDMYPE UGB es la solución</h1>
+                <!--<h1 class="display-4">Nuestra plataforma esta en mantenimiento, en unos momentos estaremos de nuevo al aire</h1>
+                <h3>Mientras tanto puedes visitarnos por medio de facebook:</h3>
+                <h1 class="display-4"><a href="https://www.facebook.com/cdmypeugbusulutan/" target="_blank"><i class="fab fa-facebook" style="color: #395A9A;"></i></a></h1>-->                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="silver jumbotron jumbotron-fluid">
+    <div class="container text-center">
+        <div class="row no-gutters">
+            <div class="col-sm-12 col-md-12 offset-md-0">
+                <h5>Acerca de CDMYPE UGB</h5>
+                <% if @welcome.about.present? %><p class="no-margin"><%= @welcome.about %></p><% end %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <div class="row">
+            
+            <!--<div class="col-sm-12 col-md-12 offset-md-0 text-center">
+                <h5>Nuestros servicios</h5>
+                <h6>Ofrecemos servicios personalizados</h6><br>
+            </div>-->
+
+            <div class="col-sm-12 col-md-6">
+                <div class="card">
+                    <div class="card-body text-right">
+                        <h1><i class="brown-text fas fa-briefcase"></i></h1>
+                        <h6>Asesoria empresarial</h6>
+                        <p class="no-margin"><%= truncate("Se brinda acompañamiento integral a la persona emprendedora o empresaria para ayudarle a resolver problemas en áreas de la empresa como: Administración, producción, mercadeo, finanzas, etc", length: 130) %></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body text-right">
+                        <h1><i class="grey-text fas fa-tv"></i></h1>
+                        <h6>Asesoria en el uso de las TIC's</h6>
+                        <p class="no-margin"><%= truncate("Los empresarios y empresarias reciben apoyo para aplicar la tecnología (informática, sistemas computacionales, dispositivos electrónicos, internet, telecomunicaciones, etc) y con ello acceder a nuevos servicios e más información, mejorar sus competencias, abrirse a nuevos mercados, entre otros", length: 130) %></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body text-right">
+                        <h1><i class="purple-text fas fa-female"></i></h1>
+                        <h6>Empresarialidad femenina</h6>
+                        <p class="no-margin"><%= truncate("Es un proceso de acompañamiento especializado a la emprendedora o empresaria de la MYPE de subsistencia, cuenta propia, individual o asociada", length: 130) %></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h1><i class="green-text far fa-money-bill-alt"></i></h1>
+                        <h6>Asesoria financiera</h6>
+                        <p class="no-margin"><%= truncate("Proceso de acompañamiento que se hace a un cliente por un periodo para desarrollar las condiciones necesarias para optar a un financiamiento para su empresa", length: 130) %></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h1><i class="red-text far fa-life-ring"></i></h1>
+                        <h6>Asistencia tecnica</h6>
+                        <p class="no-margin"><%= truncate("Se ofrecen servicios técnicos en temas de gestión empresarial o temas especializados, fortaleciendo aspectos como: diseños de procesos productivos, reformulación y diversificación de productos, imagen comercial, planes de mercadeo, diseño de estrategia de promoción o publicitaria u otros que requiera la empresa", length: 130) %></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h1><i class="blue-text fas fa-users"></i></h1>
+                        <h6>Capacitaciones</h6>
+                        <p class="no-margin"><%= truncate("Se brinda información en diferentes áreas, de manera grupal para una o varias empresas en diversos temas como: características empresariales personales, planes de negocios, técnicas efectivas de ventas, servicio al cliente, etc", length: 130) %></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

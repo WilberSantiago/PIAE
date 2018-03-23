@@ -1,0 +1,27 @@
+<%= form_with(model: job_category, local: true) do |form| %>
+  <% if job_category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(job_category.errors.count, "error") %> prohibited this job_category from being saved:</h2>
+
+      <ul>
+      <% job_category.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :job_category_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image, id: :job_category_image %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
